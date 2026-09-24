@@ -1,0 +1,17 @@
+# MATLAB autosaves, lock files, and generated files
+*.asv
+*.m~
+*.mat
+*.wav
+*.mp3
+*.fig
+*.png
+*.pdf.asv
+*.tmp
+*.lock
+slprj/
+codegen/
+
+# Editor and operating-system files
+.DS_Store
+.vscode/
