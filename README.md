@@ -4,6 +4,8 @@ A MATLAB speech-enhancement project that reduces additive white Gaussian noise w
 
 The project also compares spectral estimators and studies how noise affects speech signals. The included report is in French.
 
+**Project report:** [Read the French report](docs/report-fr.pdf).
+
 ## Results
 
 The report evaluates the algorithm with input speech-to-noise ratios (SNRs) of 5, 10, and 15 dB.
@@ -21,7 +23,7 @@ These are the values reported for the speech sample and experiment described in 
 - Add white Gaussian noise at a selected target SNR.
 - Divide the speech signal into 512-sample frames with 50% overlap.
 - Apply a Hamming window and estimate the noise power spectrum from the first five frames.
-- Subtract the estimated noise power from each frame’s power spectrum, flooring negative values at zero.
+- Subtract the estimated noise power from each frame's power spectrum, flooring negative values at zero.
 - Preserve the noisy phase, apply the inverse FFT, and reconstruct the signal with overlap-add.
 - Compare input and output SNR.
 
@@ -41,7 +43,7 @@ docs/
 - Signal Processing Toolbox for functions such as `pwelch`, `spectrogram`, and `hamming`
 - The speech input file `fcno03fz.mat`, which is not included in this repository
 
-The Live Script loads `fcno03fz.mat` from MATLAB’s current folder. Place an authorized speech sample with that variable name in the `matlab/` folder, then set `matlab/` as the current folder in MATLAB. Do not publish speech data unless you have permission to share it.
+The Live Script loads `fcno03fz.mat` from MATLAB's current folder. Place an authorized speech sample with that variable name in the `matlab/` folder, then set `matlab/` as the current folder in MATLAB. Do not publish speech data unless you have permission to share it.
 
 ## Run
 
@@ -53,4 +55,4 @@ This is an academic signal-processing project. The evaluation reports SNR gain f
 
 ## Français
 
-Projet MATLAB de rehaussement de la parole par soustraction spectrale. Le signal est traité par trames de 512 échantillons avec 50 % de recouvrement. Le rapport fourni présente des gains de RSB de 3,6 dB, 3,2 dB et 2,8 dB pour des RSB d’entrée de 5 dB, 10 dB et 15 dB. Le fichier audio source n’est pas inclus.
+Projet MATLAB de rehaussement de la parole par soustraction spectrale. Le signal est traité par trames de 512 échantillons avec 50 % de recouvrement. Le rapport français fourni présente des gains de RSB de 3,6 dB, 3,2 dB et 2,8 dB pour des RSB d'entrée de 5 dB, 10 dB et 15 dB respectivement. Le fichier audio source n'est pas inclus.
